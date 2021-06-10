@@ -33,11 +33,11 @@ public class Boundary {
 	            System.out.print(node.data + " ");
 	            printBoundaryLeft(node.left);
 	        }
-	        else if (node.right != null) {
-	            System.out.print(node.data + " ");
-	            printBoundaryLeft(node.right);
-	        }
-	
+//	        else if (node.right != null) {
+//	            System.out.print(node.data + " ");
+//	            printBoundaryLeft(node.right);
+//	        }
+//	
 	    }
 	 
 	 static void printBoundaryRight(Node node)
@@ -50,12 +50,12 @@ public class Boundary {
 	            printBoundaryRight(node.right);
 	            System.out.print(node.data + " ");
 	        }
-	        else if (node.left != null) {
-	            printBoundaryRight(node.left);
-	            System.out.print(node.data + " ");
-	        }
+//	        else if (node.left != null) {
+//	            printBoundaryRight(node.left);
+//	            System.out.print(node.data + " ");
+//	        }
 	    }
-	 
+//	 
 	 static void printBoundary(Node node)
 	    {
 	        if (node == null)
@@ -70,12 +70,11 @@ public class Boundary {
 	    }
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Node root = new Node(10);
-//        root.left = new Node(2);
+        root.left = new Node(2);
         root.right = new Node(3);
-//        root.left.left = new Node(4);
-//        root.left.right = new Node(5);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
         root.right.left.right = new Node(8);
